@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeuEvento.Views.StartPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="5">
+
+        <Frame BackgroundColor="SaddleBrown" BorderColor="#00ffffff">
+            <Label
+            Text="Seja Bem-Vindo(a) ao App Meu Hotel"
+            FontSize="20"
+            FontFamily="Spicy"
+            TextColor="Wheat" 
+            BackgroundColor="SaddleBrown"    
+           />
+
+        </Frame>
+
+        <Frame BackgroundColor="#60f5deb3" BorderColor="#908b4513" WidthRequest="295" >
+
+            <VerticalStackLayout Spacing="14" Padding="4">
+                <Button Text="ㅤIniciarㅤ"
+                FontAttributes="Bold"                       
+                FontSize="20"
+                Padding="15"
+                BackgroundColor="Wheat"
+                TextColor="Black"
+                HorizontalOptions="Center" 
+                CharacterSpacing="1"
+                BorderColor="Orange"
+                BorderWidth="3"
+                Clicked="Button_Clicked"
+                />
+
+                <Button Text="ㅤSobreㅤ"
+                FontAttributes="Bold"                       
+                FontSize="16"
+                Padding="15"
+                BackgroundColor="Wheat"
+                TextColor="Black"
+                HorizontalOptions="Center" 
+                BorderColor="Orange"
+                BorderWidth="3"
+                Clicked="Button_Clicked_1"        
+                />
+
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
