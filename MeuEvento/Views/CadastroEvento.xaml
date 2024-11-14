@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeuEvento.Views.CadastroEvento"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout VerticalOptions="Center" >
+
+        <Frame BackgroundColor="#80ffffff">
+            <Label 
+                Text="Welcome to the mato!"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                TextColor="Black"/>
+        </Frame>
+
+        <Frame BackgroundColor="#80ffffff">
+            <VerticalStackLayout Spacing="5">
+
+
+                <Label  Text="Digite o nome do Evento:"/>
+                <Entry  x:Name="Nome" Text="a"/>
+
+              
+
+                    
+                    
+                    <Label Text="Data Inicial:" />
+                    <DatePicker Grid.Row="0" Grid.Column="0" x:Name="dtInicial" 
+             Format="dd/MM/yyyy">
+                    </DatePicker>
+
+                    <Label Text="Data Final:" />
+                    <DatePicker Grid.Row="0" Grid.Column="2" x:Name="dtFinal" 
+             Format="dd/MM/yyyy">
+                    </DatePicker>
+
+                
+                <Label  Text="Digite o número de Participantes:"/>
+                <Stepper  x:Name="NumParticipantes"   
+                          Minimum="0"
+                          Maximum="10"
+                          Increment="1" />
+
+
+                <Label  Text="Digite o local do evento:"/>
+                <Entry  x:Name="LocalEvento" Text="a"/>
+
+                <Label  Text="Digite o custo de cada participante:"/>
+                <Entry  x:Name="CustoParticipante" Text="a"/>
+
+                <Button Text="Calcular"></Button>
+
+            </VerticalStackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -6,9 +6,9 @@
         {
             InitializeComponent();
 
-         
-              MainPage = new NavigationPage(new Views.StartPage());
-            //  MainPage = new NavigationPage(new Views.Sobre());
+
+            //  MainPage = new NavigationPage(new Views.StartPage());
+              MainPage = new NavigationPage(new Views.CadastroEvento());
         }
 
         protected override Window CreateWindow(IActivationState? activationState)
