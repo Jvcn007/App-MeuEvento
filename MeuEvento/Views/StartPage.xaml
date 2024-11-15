@@ -2,17 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeuEvento.Views.StartPage"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="background.png">
 
     <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="5">
 
-        <Frame BackgroundColor="SaddleBrown" BorderColor="#00ffffff">
+        <Frame BackgroundColor="#5f4d4d" BorderColor="#00ffffff">
             <Label
-            Text="Seja Bem-Vindo(a) ao App Meu Hotel"
+            Text="Seja Bem-Vindo(a) ao App Meu Evento"
             FontSize="20"
             FontFamily="Spicy"
-            TextColor="Wheat" 
-            BackgroundColor="SaddleBrown"    
+            TextColor="Wheat"
+BackgroundColor="#5f4d4d"   
            />
 
         </Frame>
@@ -28,7 +29,7 @@
                 TextColor="Black"
                 HorizontalOptions="Center" 
                 CharacterSpacing="1"
-                BorderColor="Orange"
+                BorderColor="#ca8300"
                 BorderWidth="3"
                 Clicked="Button_Clicked"
                 />
@@ -40,7 +41,7 @@
                 BackgroundColor="Wheat"
                 TextColor="Black"
                 HorizontalOptions="Center" 
-                BorderColor="Orange"
+                BorderColor="#ca8300"
                 BorderWidth="3"
                 Clicked="Button_Clicked_1"        
                 />

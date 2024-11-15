@@ -2,11 +2,41 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeuEvento.Views.ResultadoEvento"
-             Title="ResultadoEvento">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="background.png">
+    
+    
+    
+    
+    
+    
+    
+    <VerticalStackLayout Spacing="5" Padding="10">
+
+
+      
+            <Button
+                Text="Welcome to the mato!"   
+                FontFamily="Spicy"
+                TextColor="Wheat"
+                BackgroundColor="#5f4d4d"             
+                FontSize="32"/> <!-- penso em colocar o nome do evento quando digitado aqui de maneira automatica-->
+
+
+        <Frame BackgroundColor="#5f4d4d" BorderColor="#5f4d4d">
+            <VerticalStackLayout>
+            <Label Text="Nome do evento:" />
+            <Label Text="Data inicio:" />
+            <Label Text="Data final:" />
+            <Label Text="Quantidade de dias:" />
+            <Label Text="Numero de participantes:" />
+            <Label Text="Local do Evento:" />
+            <Label Text="Custo por participante:" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button BackgroundColor="#f5deb3" HorizontalOptions="CenterAndExpand" Text="Voltar"
+        Clicked="Button_Clicked"></Button>
+      
     </VerticalStackLayout>
 </ContentPage>

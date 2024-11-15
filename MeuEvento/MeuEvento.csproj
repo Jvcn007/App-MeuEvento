@@ -57,6 +57,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\imgbk.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Fonts\SpicyRice.ttf" />
+	  <None Remove="Resources\Images\background.png" />
+	  <None Remove="Resources\Images\imgbk.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	</ItemGroup>
 

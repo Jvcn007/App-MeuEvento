@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeuEvento.Views.Sobre"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="background.png">
     
     <VerticalStackLayout Spacing="5" Padding="10">
 
@@ -10,7 +11,7 @@
                  FontFamily="Spicy"
                  Padding="7"
                  TextColor="Wheat"
-                 BackgroundColor="SaddleBrown"
+                 BackgroundColor="#5f4d4d"
                  HorizontalOptions="FillAndExpand" 
                  FontSize="32"
                  />
@@ -74,7 +75,7 @@
                 TextColor="Black"
                 HorizontalOptions="Center" 
                 CharacterSpacing="1"
-                BorderColor="Orange"
+                BorderColor="#ca8300"
                 BorderWidth="3"
                 Clicked="Button_Clicked"/>
         </Frame>

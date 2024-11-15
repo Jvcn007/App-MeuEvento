@@ -13,6 +13,7 @@ namespace MeuEvento
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("SpicyRice.ttf", "Spicy");
                 });
 
 #if DEBUG
