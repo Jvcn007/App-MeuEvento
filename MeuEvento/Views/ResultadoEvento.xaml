@@ -4,64 +4,127 @@
              x:Class="MeuEvento.Views.ResultadoEvento"
              NavigationPage.HasNavigationBar="False"
              BackgroundImageSource="background.png">
-    
-    
-    
-    
-    
-    
-    
-    <VerticalStackLayout Spacing="5" Padding="10">
 
-
-      
+    <VerticalStackLayout Spacing="15" 
+                         Padding="10" 
+                         VerticalOptions="Center" 
+                         HorizontalOptions="Center">
+ 
             <Button
-                Text="Welcome to the mato!"   
+                Text="ㅤResultado - Eventoㅤ"   
                 FontFamily="Spicy"
                 TextColor="Wheat"
                 BackgroundColor="#5f4d4d"             
-                FontSize="32"/> <!-- penso em colocar o nome do evento quando digitado aqui de maneira automatica-->
+                FontSize="32"/> 
 
 
         <Frame BackgroundColor="#5f4d4d" BorderColor="#5f4d4d">
             <VerticalStackLayout>
-            <Label Text="Nome do evento:" />
-                <Label Text="{Binding Nome}" />
-                                          
-                
-            <Label Text="Data inicio:" />
-                <Label Text="{Binding DtInicial, StringFormat='{}{0:dd/MM/yyyy}'}" />
-                
-                
-                <Label Text="Data final:" />
-                <Label Text="{Binding DtFinal, StringFormat='{}{0:dd/MM/yyyy}'}" />
-                
-                
-            <Label Text="Quantidade de dias:" />
-                <Label Text="{Binding QntDias}" />
+
+                <Grid ColumnDefinitions="*, * " 
+                      RowDefinitions="*,*,*,*,*,*,*,*,*" 
+                      RowSpacing="20" 
+                      ColumnSpacing="12">
 
 
-                <Label Text="Numero de participantes:" />
-                <Label Text="{Binding NumParticipantes}" />
-                
-            <Label Text="Local do Evento:" />
-                <Label Text="{Binding LocalEvento}" />
-                
-            <Label Text="Custo por participante:" />
-                <Label Text="{Binding CustoParticipante, StringFormat='{}{0:c}'}" />
-           
+                    <Label Text="Nome do evento:"
+                           Grid.Row="0" 
+                           Grid.Column="0"/>
 
-            <Label Text="Valor Total:" />
-            <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'}"/>
+                    <Label Text="{Binding Nome}"
+                           TextColor="#fff3ba" 
+                           Grid.Row="0" 
+                           Grid.Column="1" />
+
+                    <Label Text="Data inicial:" 
+                           Grid.Row="1"
+                           Grid.Column="0"/>
+
+                    <Label Text="{Binding DtInicial, StringFormat='{}{0:dd/MM/yyyy}'}" 
+                           TextColor="#fff3ba" 
+                           Grid.Row="1"
+                           Grid.Column="1" />
+
+                    <Label Text="Data final:"
+                           Grid.Row="2"
+                           Grid.Column="0"/>
+
+                    <Label Text="{Binding DtFinal, StringFormat='{}{0:dd/MM/yyyy}'}"
+                           TextColor="#fff3ba" 
+                           Grid.Row="2"
+                           Grid.Column="1"/>
+
+                    <Label Text="Duração:"
+                           Grid.Row="3" 
+                           Grid.Column="0"/>
+
+                    <Label Text="{Binding QntDias}"
+                           TextColor="#fff3ba" 
+                           Grid.Row="3"
+                           Grid.Column="1" />
+
+                    <Label Text="ㅤ Dia(s)" TextColor="#fff3ba" 
+                           Grid.Row="3" 
+                           Grid.Column="1" />
+
+                    <Label Text="Nº de Pessoas:"
+                           Grid.Row="4" 
+                           Grid.Column="0"/>
+
+                    <Label Text="{Binding NumParticipantes}"
+                           TextColor="#fff3ba" 
+                           Grid.Row="4" 
+                           Grid.Column="1" />
+
+                    <Label Text="Local do Evento:"
+                           Grid.Row="5" 
+                           Grid.Column="0" />
+
+                    <Label Text="{Binding LocalEvento}"
+                           TextColor="#fff3ba"
+                           Grid.Row="5"
+                           Grid.Column="1" />
+
+                    <Label Text="Valor por pessoa:"
+                           Grid.Row="6" 
+                           Grid.Column="0" />
+
+                    <Label Text="{Binding CustoParticipante, StringFormat='{}{0:c}'}"
+                           TextColor="#fff3ba"
+                           Grid.Row="6" 
+                           Grid.Column="1"/>
+                </Grid>
 
 
+                <Frame BackgroundColor="#2c2323">
+                    <VerticalStackLayout >
+
+                        <Grid ColumnDefinitions="*, *" 
+                              RowDefinitions="*"
+                              RowSpacing="20">
+
+                            <Label Grid.Row="0" 
+                           Grid.Column="0" 
+                           Text="Valor Total:"/>
+
+                            <Label Grid.Row="0"
+                           Grid.Column="1" 
+                           Text="{Binding ValorTotal, StringFormat='{}{0:c}'}"
+                           TextColor="#fff3ba"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Frame>
             </VerticalStackLayout>
-
-
         </Frame>
 
-        <Button BackgroundColor="#f5deb3" HorizontalOptions="CenterAndExpand" Text="Voltar"
-        Clicked="Button_Clicked"></Button>
-      
+        <Button BackgroundColor="#f5deb3"   
+                HorizontalOptions="Center"
+                Text="Voltar" 
+                Clicked="Button_Clicked" 
+                BorderColor="#ca8300" 
+                BorderWidth="1.5"
+                FontAttributes="Bold"
+                FontSize="15"
+                Padding="14"></Button>
     </VerticalStackLayout>
 </ContentPage>

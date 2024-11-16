@@ -13,7 +13,7 @@
             FontSize="20"
             FontFamily="Spicy"
             TextColor="Wheat"
-BackgroundColor="#5f4d4d"   
+            BackgroundColor="#5f4d4d"   
            />
 
         </Frame>

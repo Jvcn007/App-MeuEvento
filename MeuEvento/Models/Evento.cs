@@ -2,8 +2,6 @@
 {
     public class Evento
     {
-
-
         public String Nome { get; set; }
         public String LocalEvento { get; set; }
         public int CustoParticipante { get; set; }

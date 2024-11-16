@@ -4,50 +4,48 @@
              x:Class="MeuEvento.Views.CadastroEvento"
              NavigationPage.HasNavigationBar="False"
              BackgroundImageSource="background.png">
-    
-    
-   
-    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Spacing="11">
 
-            <Button Text="Cálculo do Evento"     
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Spacing="6">
+        <Button Text="Cálculo do Evento"     
                     TextColor="Wheat"
                     BackgroundColor="#5f4d4d"
                     FontFamily="Spicy" FontSize="40" 
                     HorizontalOptions="Center"/>
         
-        
-   
-        <Frame BackgroundColor="#20000000" BorderColor="Wheat"  >
+        <Frame BackgroundColor="#20000000" BorderColor="Wheat">
             <VerticalStackLayout Spacing="6">
 
-
                 <Label  Text="Digite o nome do Evento:"/>
-                <Entry  x:Name="Nome" Text="a" />
-
-
+                <Entry  x:Name="Nome"/>
 
                 <Grid RowDefinitions="95, Auto"
                       ColumnDefinitions="*, *"
                       RowSpacing="-12">
 
-                    <Label Grid.Row="0" Grid.Column="0" Text="Data Inicial:"/>
-                    <DatePicker Grid.Row="0" Grid.Column="0" x:Name="DtInicial" 
+                    <Label Grid.Row="0"     
+                           Grid.Column="0" 
+                           Text="Data Inicial:"/>
+                    
+                    <DatePicker Grid.Row="0"    
+                                Grid.Column="0"
+                                x:Name="DtInicial" 
                                 DateSelected="DtInicial_Selected"
                                 Format="dd/MM/yyyy"/>
 
+                    <Label Grid.Row="0"
+                           Grid.Column="1" 
+                           Text="Data Final:" />
 
-                    <Label Grid.Row="0" Grid.Column="1" Text="Data Final:" />
-                    <DatePicker Grid.Row="0" Grid.Column="1" x:Name="DtFinal" 
-             Format="dd/MM/yyyy">
+                    <DatePicker Grid.Row="0"
+                                Grid.Column="1"
+                                x:Name="DtFinal" 
+                                Format="dd/MM/yyyy">
                     </DatePicker>
-
                 </Grid>
 
-
-
                 <Grid RowDefinitions="Auto, Auto" 
-                        ColumnDefinitions="*, *, 1.2*"
-                         RowSpacing="20" ColumnSpacing="10">
+                      ColumnDefinitions="*, *, 1.2*"
+                      RowSpacing="20" ColumnSpacing="10">
                     
                     <Label  Grid.Row="0" Grid.Column="0" Text=" Nº Pessoas:"/>
                     
@@ -57,25 +55,40 @@
                            Text="{Binding Value}"
                            BindingContext="{x:Reference NumParticipantes}"></Label>
                     
-                    <Stepper Grid.Row="0" Grid.Column="2" x:Name="NumParticipantes"   
-                          Minimum="0"
-                          Maximum="100"
-                          Increment="1"
-                             />
+                    <Stepper Grid.Row="0"   
+                             Grid.Column="2" 
+                             x:Name="NumParticipantes"   
+                             Minimum="0"
+                             Maximum="100"
+                             Increment="1"/>
                 </Grid>
 
                 <Label  Text="Digite o local do evento:"/>
-                <Entry  x:Name="LocalEvento" Text="a"/>
+                <Entry  x:Name="LocalEvento"/>
 
                 <Label  Text="Digite o custo de cada participante:"/>
-                <Entry  x:Name="CustoParticipante" Text="1"/>
+                <Entry  x:Name="CustoParticipante"/>
+                <Label  Text="ㅤ"/>
 
-                <Button BackgroundColor="#f5deb3" Text="Calcular" Clicked="Button_Clicked" BorderColor="#ca8300"
-                        BorderWidth="1.5"  FontAttributes="Bold" FontSize="14"></Button>
+                <Button BackgroundColor="#f5deb3"
+                        Text="Calcular" 
+                        Clicked="Button_Clicked"
+                        BorderColor="#ca8300"
+                        BorderWidth="1.5" 
+                        FontAttributes="Bold"
+                        FontSize="14">
+                </Button>
 
             </VerticalStackLayout>
         </Frame>
-        <Button  BackgroundColor="#f5deb3" HorizontalOptions="CenterAndExpand" Text="Voltar"
-                Clicked="Button_Clicked_1" BorderColor="#ca8300" BorderWidth="1.5" FontAttributes="Bold" FontSize="12" ></Button>
+        <Button  BackgroundColor="#f5deb3" 
+                 HorizontalOptions="CenterAndExpand" 
+                 Text="Voltar"
+                 Clicked="Button_Clicked_1" 
+                 BorderColor="#ca8300"
+                 BorderWidth="1.5" 
+                 FontAttributes="Bold"
+                 FontSize="12">
+        </Button>
     </VerticalStackLayout>
 </ContentPage>
