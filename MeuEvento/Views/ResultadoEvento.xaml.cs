@@ -5,6 +5,7 @@ public partial class ResultadoEvento : ContentPage
 	public ResultadoEvento()
 	{
 		InitializeComponent();
+    
 	}
 
     private void Button_Clicked(object sender, EventArgs e)

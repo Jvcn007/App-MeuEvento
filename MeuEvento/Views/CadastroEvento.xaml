@@ -7,9 +7,9 @@
     
     
    
-    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Spacing="12">
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Spacing="11">
 
-            <Button Text="Cálculo da Diária"     
+            <Button Text="Cálculo do Evento"     
                     TextColor="Wheat"
                     BackgroundColor="#5f4d4d"
                     FontFamily="Spicy" FontSize="40" 
@@ -17,26 +17,27 @@
         
         
    
-        <Frame BackgroundColor="#10000000" BorderColor="Wheat" >
-            <VerticalStackLayout Spacing="5">
+        <Frame BackgroundColor="#20000000" BorderColor="Wheat"  >
+            <VerticalStackLayout Spacing="6">
 
 
                 <Label  Text="Digite o nome do Evento:"/>
-                <Entry  x:Name="Nome" Text="a"/>
+                <Entry  x:Name="Nome" Text="a" />
 
 
 
                 <Grid RowDefinitions="95, Auto"
-      ColumnDefinitions="*, *"
-      RowSpacing="-12">
+                      ColumnDefinitions="*, *"
+                      RowSpacing="-12">
 
                     <Label Grid.Row="0" Grid.Column="0" Text="Data Inicial:"/>
-                    <DatePicker Grid.Row="0" Grid.Column="0" x:Name="dtInicial" 
-             Format="dd/MM/yyyy"/>
+                    <DatePicker Grid.Row="0" Grid.Column="0" x:Name="DtInicial" 
+                                DateSelected="DtInicial_Selected"
+                                Format="dd/MM/yyyy"/>
 
 
                     <Label Grid.Row="0" Grid.Column="1" Text="Data Final:" />
-                    <DatePicker Grid.Row="0" Grid.Column="1" x:Name="dtFinal" 
+                    <DatePicker Grid.Row="0" Grid.Column="1" x:Name="DtFinal" 
              Format="dd/MM/yyyy">
                     </DatePicker>
 
@@ -67,13 +68,14 @@
                 <Entry  x:Name="LocalEvento" Text="a"/>
 
                 <Label  Text="Digite o custo de cada participante:"/>
-                <Entry  x:Name="CustoParticipante" Text="a"/>
+                <Entry  x:Name="CustoParticipante" Text="1"/>
 
-                <Button BackgroundColor="#f5deb3" Text="Calcular" Clicked="Button_Clicked"></Button>
+                <Button BackgroundColor="#f5deb3" Text="Calcular" Clicked="Button_Clicked" BorderColor="#ca8300"
+                        BorderWidth="1.5"  FontAttributes="Bold" FontSize="14"></Button>
 
             </VerticalStackLayout>
         </Frame>
-        <Button BackgroundColor="#f5deb3" HorizontalOptions="CenterAndExpand" Text="Voltar"
-                Clicked="Button_Clicked_1"></Button>
+        <Button  BackgroundColor="#f5deb3" HorizontalOptions="CenterAndExpand" Text="Voltar"
+                Clicked="Button_Clicked_1" BorderColor="#ca8300" BorderWidth="1.5" FontAttributes="Bold" FontSize="12" ></Button>
     </VerticalStackLayout>
 </ContentPage>

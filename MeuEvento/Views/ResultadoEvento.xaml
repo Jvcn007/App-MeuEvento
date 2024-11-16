@@ -26,13 +26,38 @@
         <Frame BackgroundColor="#5f4d4d" BorderColor="#5f4d4d">
             <VerticalStackLayout>
             <Label Text="Nome do evento:" />
+                <Label Text="{Binding Nome}" />
+                                          
+                
             <Label Text="Data inicio:" />
-            <Label Text="Data final:" />
+                <Label Text="{Binding DtInicial, StringFormat='{}{0:dd/MM/yyyy}'}" />
+                
+                
+                <Label Text="Data final:" />
+                <Label Text="{Binding DtFinal, StringFormat='{}{0:dd/MM/yyyy}'}" />
+                
+                
             <Label Text="Quantidade de dias:" />
-            <Label Text="Numero de participantes:" />
+                <Label Text="{Binding QntDias}" />
+
+
+                <Label Text="Numero de participantes:" />
+                <Label Text="{Binding NumParticipantes}" />
+                
             <Label Text="Local do Evento:" />
+                <Label Text="{Binding LocalEvento}" />
+                
             <Label Text="Custo por participante:" />
+                <Label Text="{Binding CustoParticipante, StringFormat='{}{0:c}'}" />
+           
+
+            <Label Text="Valor Total:" />
+            <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'}"/>
+
+
             </VerticalStackLayout>
+
+
         </Frame>
 
         <Button BackgroundColor="#f5deb3" HorizontalOptions="CenterAndExpand" Text="Voltar"
